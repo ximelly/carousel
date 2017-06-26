@@ -1,0 +1,6 @@
+img{display: block;width:100%;height:auto;}
+ul{list-style: none;padding:0;margin:0;}
+.banenr{position: relative;width:100%;}
+.slideOuter{overflow-x: auto;}
+.scrollWrap{width:300%;position:absolute;left:0;top:0;}
+.scrollWrap li{float: left;width:33.33%;}
