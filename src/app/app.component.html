@@ -1,7 +1,16 @@
-<div class="banenr">
+<div class="banenr" (mouseenter)="onmouseenter()" (mouseleave)="onmouseleave()">
   <div class="slideOuter">
     <ul class="scrollWrap" [ngStyle]="{'left':leftLenth}">
-      <li *ngFor="let slide of slides"><img [src]="slide" alt=""></li>  
+      <li *ngFor="let slide of slides"><img [src]="slide"></li>  
     </ul>
+  </div>
+  <div class="circle">
+    <ul>
+      <li *ngFor="let slide of slides;let i = index;" [ngClass]="{active:slideNum==i}" (click)="circleClick(i)"></li>
+    </ul>
+  </div>
+  <div class="changeBar" *ngIf="changeBar">
+    <div><span (click)="leftClick()"><</span></div>
+    <div><span (click)="rightClick()">></span></div>
   </div>
 </div>

@@ -1,6 +1,27 @@
 img{display: block;width:100%;height:auto;}
 ul{list-style: none;padding:0;margin:0;}
-.banenr{position: relative;width:100%;}
+.banenr{position: relative;width:100%;height:150px;overflow: hidden;}
 .slideOuter{overflow-x: auto;}
-.scrollWrap{width:300%;position:absolute;left:0;top:0;}
+.scrollWrap{width:300%;position:absolute;
+left:0;
+top:0;
+/*transition:left 1s;
+-moz-transition:left 1s; 
+-webkit-transition:left 1s;
+-o-transition:left 1s;*/
+}
 .scrollWrap li{float: left;width:33.33%;}
+/*小圆圈样式*/
+.circle{position:absolute;width:auto;bottom:10px;width:100%;text-align: center;z-index:5;}
+.circle ul{display: inline-block;clear: both;margin: 0 auto;}
+.circle li{width:8px;height:8px;border:1px solid #ccc;border-radius: 5px;float: left;margin-right:5px;}
+.circle li:last-of-type{margin:0}
+.circle li.active{background:#ccc;}
+/*左右滑动*/
+.changeBar{width:100%;height:100%;font-size:30px;position:absolute;top:0;left:0;z-index: 2;color:red;font-weight: bold;text-shadow: 1px 1px 2px #ccc;}
+.changeBar div{height:100%;display: -webkit-box;-webkit-box-pack:center;-webkit-box-align:center;width:20%;}
+.changeBar div:first-of-type{float:left;}
+.changeBar div:last-of-type{float:right;}
+.changeBar span,.circle li{cursor:pointer;}
+
+.changeBtn{display:inline-block;margin-top:20px;text-align: center;padding:5px 10px;cursor:pointer;}
